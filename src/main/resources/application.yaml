@@ -1,0 +1,25 @@
+
+server:
+  port: 8888
+
+spring:
+  profiles:
+    active: git
+  security:
+    user:
+      name: user
+      password: password
+
+logging:
+  level:
+    org.springframework.cloud.config: DEBUG
+
+---
+spring:
+  profiles: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/getstarted-spring/configstore.git
+          cloneOnStart: true

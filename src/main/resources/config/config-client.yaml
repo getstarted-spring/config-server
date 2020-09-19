@@ -1,0 +1,6 @@
+logging:
+  level:
+    org.springframework.boot: DEBUG
+
+greeting:
+  message: hi, this is a message served from local file system config server
